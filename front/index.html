@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados Roleta</title>
+  <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+  <div class="container">
+    <div id="resultList" class="horizontal-list"></div>
+    <div class="content">
+      <div class="sidebar">
+        <div class="calc">
+          <h2>Calculadora de Entradas</h2>
+          <input type="text" id="valorDaBanca" placeholder="Valor da Banca" oninput="formatCurrency(this)">
+          <input type="number" step="0.001" id="taxaDesejada" placeholder="Taxa Desejada">
+          <button onclick="calcularEntrada()">Calcular Entrada</button>
+          <p id="resultadoEntrada"></p>
+        </div>
+        <div class="full-width">
+          <h2 class="tituloHora"></h2>
+          <div class="content-list" id="brancosList"></div>
+        </div>
+        <div class="full-width-probabilidade">
+          <h2>Possíveis Brancos</h2>
+          <div class="content-list" id="possiveisList"></div>
+        </div>
+      </div>
+      <iframe id="pageFrame" src="https://blaze1.space/pt/games/double"></iframe>
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>
